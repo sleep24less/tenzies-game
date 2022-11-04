@@ -147,6 +147,7 @@ body {
   background-color: var(--color-bg);
   height: 100vh;
   font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 }
 
 #root {
@@ -157,8 +158,54 @@ body {
 }
 
 .main_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-box);
   height: 640px;
   width: 640px;
   border-radius: 20px;
+}
+
+.dice_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.die {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-dice);
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.15);
+  font-size: 2.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.die:active {
+  box-shadow: inset 0px 4px 5px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* Cant select text in dice */
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
