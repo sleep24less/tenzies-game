@@ -128,3 +128,37 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+/* _________________________________________CSS RESET ENDS HERE______________ */
+
+:root {
+  --color-bg: #0B2434;
+  --color-box: #F5F5F5;
+  --color-dice: #FFFFFF;
+  --color-accent: #5035FF;
+  --color-text: #4A4E74;
+}
+
+body {
+  background-color: var(--color-bg);
+  height: 100vh;
+  font-size: 16px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.main_box {
+  background-color: var(--color-box);
+  height: 640px;
+  width: 640px;
+  border-radius: 20px;
+}
