@@ -166,6 +166,20 @@ body {
   height: 640px;
   width: 640px;
   border-radius: 20px;
+  gap: 60px;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.instructions {
+  text-align: center;
+  width: 75%;
+  font-size: 1.3rem;
+  color: var(--color-text);
 }
 
 .dice_container {
@@ -202,7 +216,6 @@ body {
   font-size: 1.5rem;
   color: #ffffff;
   letter-spacing: 2px;
-  margin-top: 100px;
   cursor: pointer;
   box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.25);
 }
