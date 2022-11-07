@@ -5,7 +5,7 @@ export default function Die(props) {
 
     return (
         <div className="die noselect" style={style} onClick={props.holdDice}>
-            <img src={`${props.value}.png`} alt={props.value} className='dice_img' />
+            <img src={`./${props.value}.png`} alt={props.value} className='dice_img' />
         </div>
     )
 }
