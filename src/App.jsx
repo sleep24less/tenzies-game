@@ -7,6 +7,7 @@ function App() {
 
   const [dice, setDice] = React.useState(allNewDice())
   const [tenzies, setTenzies] = React.useState(false)
+  const [rollCount, setRollCount] = React.useState(0)
 
   const diceElements = dice.map(die => <Die key={die.id} value={die.value} isHeld={die.isHeld} holdDice={() => holdDice(die.id)} />)
 
@@ -47,8 +48,11 @@ function App() {
           return die.isHeld === true ? die : generateNewDie()
         })
       })
+      setRollCount(oldRollCount => oldRollCount += 1)
+      console.log(rollCount)
     }
     else {
+      setRollCount(0)
       setDice(allNewDice())
       setTenzies(false)
     }
@@ -64,7 +68,7 @@ function App() {
     <main className='main_box'>
       {tenzies && <Confetti />}
       <h1 className='title'>{tenzies ? "You won!" : "Tenzies"}</h1>
-      <p className='instructions'>{!tenzies && "Roll until all dice are the same. Click each die to freeze it at its current value between rolls."}</p>
+      <p className='instructions'>{!tenzies ? "Roll until all dice are the same. Click each die to freeze it at its current value between rolls." : `You used ${rollCount} rolls!`}</p>
       <div className='dice_container'>
         {diceElements}
       </div>
