@@ -203,6 +203,11 @@ body {
   cursor: pointer;
 }
 
+.dice_img {
+  width: 100%;
+  height: auto;
+}
+
 .die:active {
   box-shadow: inset 0px 4px 5px 1px rgba(0, 0, 0, 0.35);
 }
