@@ -258,6 +258,10 @@ body {
 
 @media only screen and (max-width: 768px) {
 
+  #root {
+    flex-direction: column;
+  }
+
   .main_box {
     display: flex;
     flex-direction: column;
