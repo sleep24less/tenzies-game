@@ -264,7 +264,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     background-color: var(--color-box);
-    height: 640px;
+    height: 88vh;
     max-width: 88%;
     border-radius: 20px;
     gap: 10px;
